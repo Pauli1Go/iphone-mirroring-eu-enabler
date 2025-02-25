@@ -1,2 +1,4 @@
 # iphone-mirroring-eu-enabler
-Enables iPhone-mirroring in the EU
+Enables iPhone-mirroring in the EU<br />
+Run using Python<br />
+Make sure to allow full disk access for "Terminal" under "Privacy and Security" in the settings.
