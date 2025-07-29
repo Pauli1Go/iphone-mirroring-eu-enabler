@@ -1,6 +1,22 @@
 # iphone-mirroring-eu-enabler
-Enables iPhone-mirroring in the EU<br />
-Run using Python<br />
-Make sure to allow full disk access for "Terminal" under "Privacy and Security" in the settings.<br />
-American appleid is needed on the iPhone only.<br />
-Its enough if you change your AppStore id<br />
+
+**Enables iPhone mirroring in the EU**
+
+Run this tool using **Python** to unlock iPhone-mirroring features restricted in the EU.
+
+---
+
+## Instructions
+
+1. **Run with Python**  
+   Simply execute the script with Python.
+
+2. **Full Disk Access**  
+   Make sure to allow **Full Disk Access** for "Terminal" under  
+   *Privacy & Security* in your Mac’s settings.
+
+3. **Apple ID Requirements**  
+   An **American Apple ID** is only required on the iPhone.  
+   - It's enough to change your App Store account on the iPhone.
+
+---
