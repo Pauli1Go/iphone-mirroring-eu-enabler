@@ -17,6 +17,6 @@ Run this tool using **Python** to unlock iPhone-mirroring features restricted in
 
 3. **Apple ID Requirements**  
    An **American Apple ID** is only required on the iPhone.  
-   - It's enough to change your App Store account on the iPhone.
+   It's enough to change your App Store account on the iPhone.
 
 ---
