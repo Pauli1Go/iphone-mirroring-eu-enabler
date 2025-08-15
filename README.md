@@ -7,7 +7,7 @@ Run this tool using **Python** to unlock iPhone-mirroring features restricted in
 
 ## Instructions
 1. **Run with Python**  
-   Simply execute the script with Python.
+   Simply execute the script with Python and sudo privileges.
 2. **Full Disk Access**  
    Make sure to allow **Full Disk Access** for "Terminal" under  
    _Privacy & Security_ in your Mac’s settings.
