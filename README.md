@@ -18,3 +18,5 @@ Run this tool using **Python** to unlock iPhone-mirroring features restricted in
 ---
 
 To automate this so the program doesn't have to be run again every time, use [this](https://github.com/Pauli1Go/iphone-mirroring-eu-enabler-loop).
+
+This program works with SIP enabled, no need to disable it.
