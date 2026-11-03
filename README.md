@@ -1,22 +1,44 @@
-
 # iphone-mirroring-eu-enabler
-**Enables iPhone mirroring in the EU**  
-Run this tool using **Python** to unlock iPhone-mirroring features restricted in the EU.
 
----
+Enables iPhone Mirroring in the EU by changing the local macOS eligibility
+database. This is an unsupported system modification. Review `enable.py` and
+keep its backup. SIP can remain enabled.
 
-## Instructions
-1. **Run with Python**  
-   Simply execute the script with Python and sudo privileges.
-2. **Full Disk Access**  
-   Make sure to allow **Full Disk Access** for "Terminal" under  
-   _Privacy & Security_ in your Mac’s settings.
-3. **Apple ID Requirements**  
-   An **American Apple ID** is only required on the iPhone.  
-   It's enough to change your App Store account on the iPhone.
+## Usage
 
----
+1. Temporarily grant Terminal **Full Disk Access** in System Settings.
+2. Run with Apple's system Python in isolated mode:
 
-To automate this so the program doesn't have to be run again every time, use [this](https://github.com/Pauli1Go/iphone-mirroring-eu-enabler-loop).
+   ```bash
+   sudo /usr/bin/python3 -I enable.py
+   ```
 
-This program works with SIP enabled, no need to disable it.
+3. Confirm that iPhone Mirroring works, then revoke Terminal's Full Disk Access.
+
+The script validates the plist, preserves its format and metadata, writes via
+an atomic macOS file swap, rejects concurrent changes, and keeps this
+non-overwriting first-run backup:
+
+```text
+/private/var/db/os_eligibility/eligibility.plist.iphone-mirroring-eu-enabler.backup
+```
+
+To restore that snapshot, temporarily grant Full Disk Access and run:
+
+```bash
+sudo /usr/bin/python3 -I enable.py --restore
+```
+
+The snapshot may be older than the current macOS state. Revoke Full Disk Access
+again when finished.
+
+## Tests
+
+Tests use temporary files only:
+
+```bash
+/usr/bin/python3 -I -m unittest discover -s tests -v
+```
+
+To automate repeated application of the eligibility change, see the separate
+[loop project](https://github.com/Pauli1Go/iphone-mirroring-eu-enabler-loop).
